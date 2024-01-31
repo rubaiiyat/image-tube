@@ -1,6 +1,7 @@
 .navbar {
   margin-left: 70px;
   margin-right: 70px;
+  font-weight: 500;
 }
 #sort-by-view {
   background-color: #d3d3d3;
@@ -9,6 +10,30 @@
   color: black;
   text-align: center;
   margin-right: 50px;
+}
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+.category button {
+  background-color: #dedede;
+  color: #5d5d5d;
+  border: none;
+  padding: 7px 25px 7px 25px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.first_category {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.second-category {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
 #blog {
@@ -23,6 +48,41 @@
   margin: 30px 70px 30px 70px;
 }
 
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.main-img {
+  width: 312px;
+  height: 200px;
+  border-radius: 20px;
+}
+.profile-title {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 15px;
+}
+.profile-title img {
+  width: 50px;
+  border-radius: 50%;
+}
+.verified-profile {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+.verified-profile i {
+  color: #2568ef;
+}
 @media only screen and (max-width: 991px) {
   .navbar {
     margin-left: 0;
@@ -35,3 +95,21 @@
     margin: 20px 12px 20px 12px;
   }
 }
+@media only screen and (max-width: 550px) {
+  .first_category {
+    gap: 100px;
+    margin-bottom: -30px;
+  }
+}
+/* 
+<div class="col">
+    <div class="card">
+      <img src="${dataList.thumbnail}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">${dataList.title}</h5>
+        <p class="card-text">
+          
+        </p>
+      </div>
+    </div>
+  </div> */
