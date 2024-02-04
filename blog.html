@@ -4,13 +4,125 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
   </head>
-  <body>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem temporibus
-      voluptatibus maxime nemo mollitia vero facere odit aliquid laboriosam
-      autem exercitationem inventore esse et, eius laborum eveniet molestias
-      placeat provident.
-    </p>
+  <body class="">
+    <div class="container">
+      <div class="accordion" id="accordionExample ">
+        <div class="accordion-item  text-light text-center">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Discuss the scope of var, let, and const
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <table class="table table-success table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Var</th>
+                    <th scope="col">Let</th>
+                    <th scope="col">Const</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Var is a global scope</td>
+                    <td>let has block scope,</td>
+                    <td>const has block scope, meaning it is only accessible within the block where it is declared."</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>It's allow updating it's value and re-declared within the same scope</td>
+                    <td>It allows updating its value but does not allow re-declaration within the same block scope</td>
+                    <td>It cannot be updated or re-declared in any scope after initialization</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>It's can be declared without providing any initial value</td>
+                    <td>It can be declared without requiring an initial value</td>
+                    <td>It must be initialized at the time of declaration; otherwise, it cannot be declared</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>It's default value is "undefined"</td>
+                    <td>It must be initialized before it is accessed; otherwise, attempting to access it will result in a ReferenceError</td>
+                    <td>It cannot be accessed without initialization; attempting to do so will result in an error</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+          </div>
+        </div>
+        <div class="accordion-item bg-success text-light">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Tell us the use cases of null and undefined
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p><strong>NUll: </strong>Null represents the intentional absence of any object value in JavaScript.It is explicitly set to indicate that a variable has no meaningful value.Often used for initialization and comparisons, considered equal to undefined.</p>
+              <p><strong>Undefined: </strong>Undefined is automatically assigned to variables that are declared but not initialized.It signifies a missing or undefined value, commonly seen in function parameters or object properties.Returned by functions without an explicit return statement and used to check uninitialized values.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-success text-light">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              What do you mean by REST API?
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Rest Api means Representational State Transfer Application Programming Interface. It transfers the state of something from client to server and server to client through a representation. It provides a set of constraints and principles to create scalable, stateless, and loosely coupled web services. Key features of RESTful APIs include.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -41,6 +41,18 @@
   justify-content: center;
   gap: 50px;
 }
+.image-container {
+  position: relative;
+}
+
+.posted_date {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  background-color: #171717;
+  color: white;
+  padding: 2px;
+}
 
 #blog {
   background-color: #ff1f3d;
@@ -136,5 +148,12 @@
     width: 250px;
     height: 170px;
     border-radius: 20px;
+  }
+  .posted_date {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    background-color: #171717;
+    color: white;
   }
 }

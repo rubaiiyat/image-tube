@@ -43,8 +43,18 @@ const displayData = (data) => {
   data.forEach((dataList) => {
     const newElement = document.createElement("div");
     newElement.classList.add("card-box");
+
+    const posteddate = parseInt(dataList.others.posted_date / 60);
+    const hour = parseInt(posteddate / 60);
+    const minute = posteddate - hour * 60;
+
     newElement.innerHTML = `
-      <img class="main-img" src="${dataList.thumbnail}" alt="" />
+      <div class="image-container"><img class="main-img"  src="${
+        dataList.thumbnail
+      } " alt="" />
+      <p class="posted_date">${
+        dataList.others.posted_date ? `${hour} hours ${minute} minutes ago` : ""
+      }</p></div>
       ${dataList.authors.map(
         (author) => `
       <div class="profile-title">
@@ -68,6 +78,22 @@ const displayData = (data) => {
 
     cardContainer.appendChild(newElement);
   });
+};
+
+const sortByViewsBtn = (categoryID) => {
+  fetch(
+    `https://openapi.programming-hero.com/api/videos/category/${categoryID}`
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      const sortedView = data.data?.sort(
+        (a1, a2) => parseFloat(a2.others.views) - parseFloat(a1.others.views)
+      );
+
+      const cardContainer = document.getElementById("card-container");
+      cardContainer.innerHTML = "";
+      displayData(sortedView);
+    });
 };
 window.onload = () => {
   loadData(1000);
